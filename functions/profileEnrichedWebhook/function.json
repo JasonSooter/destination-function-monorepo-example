@@ -1,5 +1,41 @@
 {
+  "displayName": "Profile Enriched Webhook",
   "description": "Forwards track events to a customer webhook, enriched with Engage traits",
+  "resourceType": "DESTINATION",
+  "settings": [
+    {
+      "name": "webhookUrl",
+      "label": "Webhook URL",
+      "description": "Destination for the enriched payload",
+      "type": "STRING",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "traitsToReturn",
+      "label": "Traits To Return",
+      "description": "Trait names to fetch; empty skips enrichment",
+      "type": "ARRAY",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "engageSpaceId",
+      "label": "Engage Space ID",
+      "description": "Engage space queried for computed traits",
+      "type": "STRING",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "profileApiToken",
+      "label": "Profile API Token",
+      "description": "Profile API access token",
+      "type": "STRING",
+      "required": false,
+      "sensitive": true
+    }
+  ],
   "functionIds": {
     "dev": "dfn_exampleDev01",
     "qa": "dfn_exampleQa01",

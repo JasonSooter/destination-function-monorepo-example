@@ -76,6 +76,18 @@ node scripts/listFunctions.js     # the four functions, discovered from disk
 npm run bundle -- analyticsForwarder   # exactly what a deploy would upload
 ```
 
+Each function's `function.json` is also its declarative spec in Segment —
+`displayName`, `description` and the full `settings` array — so the function can be
+created via the Public API rather than clicked together in the UI:
+
+```sh
+# Dry run (the default): prints the exact API requests, sends nothing
+npm run provision -- analyticsForwarder --env=DEV
+```
+
+Every setting declared in these four specs is one its function actually reads; you
+can confirm that by grepping the bundle for the setting name.
+
 Adding a fifth function takes one command and no config edits anywhere:
 
 ```sh

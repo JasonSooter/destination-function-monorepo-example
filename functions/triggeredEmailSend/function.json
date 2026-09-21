@@ -1,5 +1,65 @@
 {
+  "displayName": "Triggered Email Send",
   "description": "Requests a marketing triggered send when a qualifying event arrives",
+  "resourceType": "DESTINATION",
+  "settings": [
+    {
+      "name": "marketingApiUrl",
+      "label": "Marketing API URL",
+      "description": "Marketing platform API base URL",
+      "type": "STRING",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "templateId",
+      "label": "Template ID",
+      "description": "Template to send",
+      "type": "STRING",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "marketingApiKey",
+      "label": "Marketing API Key",
+      "description": "Marketing platform bearer token",
+      "type": "STRING",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "triggerEvents",
+      "label": "Trigger Events",
+      "description": "Event names that trigger a send",
+      "type": "ARRAY",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "requiredTraits",
+      "label": "Required Traits",
+      "description": "Traits the template needs before sending",
+      "type": "ARRAY",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "engageSpaceId",
+      "label": "Engage Space ID",
+      "description": "Engage space queried for computed traits",
+      "type": "STRING",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "profileApiToken",
+      "label": "Profile API Token",
+      "description": "Profile API access token",
+      "type": "STRING",
+      "required": false,
+      "sensitive": true
+    }
+  ],
   "functionIds": {
     "dev": "dfn_exampleDev03",
     "qa": "dfn_exampleQa03",

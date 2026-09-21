@@ -1,5 +1,57 @@
 {
+  "displayName": "Engage Audience CRM Sync",
   "description": "Applies Engage audience membership changes to a CRM",
+  "resourceType": "DESTINATION",
+  "settings": [
+    {
+      "name": "crmBaseUrl",
+      "label": "CRM Base URL",
+      "description": "CRM API base URL",
+      "type": "STRING",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "crmApiKey",
+      "label": "CRM API Key",
+      "description": "CRM bearer token",
+      "type": "STRING",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "audienceKey",
+      "label": "Audience Key",
+      "description": "Overrides the key Engage reports in context.personas",
+      "type": "STRING",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "traitsToReturn",
+      "label": "Traits To Return",
+      "description": "Extra traits to attach to the upserted contact",
+      "type": "ARRAY",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "engageSpaceId",
+      "label": "Engage Space ID",
+      "description": "Engage space queried for computed traits",
+      "type": "STRING",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "profileApiToken",
+      "label": "Profile API Token",
+      "description": "Profile API access token",
+      "type": "STRING",
+      "required": false,
+      "sensitive": true
+    }
+  ],
   "functionIds": {
     "dev": "dfn_exampleDev02",
     "qa": "dfn_exampleQa02",

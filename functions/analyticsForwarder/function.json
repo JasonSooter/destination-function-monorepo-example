@@ -1,5 +1,25 @@
 {
+  "displayName": "Analytics Forwarder",
   "description": "Normalizes and forwards events to an analytics collector",
+  "resourceType": "DESTINATION",
+  "settings": [
+    {
+      "name": "collectorUrl",
+      "label": "Collector URL",
+      "description": "Collector endpoint",
+      "type": "STRING",
+      "required": true,
+      "sensitive": false
+    },
+    {
+      "name": "collectorApiKey",
+      "label": "Collector API Key",
+      "description": "Collector bearer token",
+      "type": "STRING",
+      "required": false,
+      "sensitive": true
+    }
+  ],
   "functionIds": {
     "dev": "dfn_exampleDev04",
     "qa": "dfn_exampleQa04",
