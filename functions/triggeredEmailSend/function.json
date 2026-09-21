@@ -1,0 +1,8 @@
+{
+  "description": "Requests a marketing triggered send when a qualifying event arrives",
+  "functionIds": {
+    "dev": "dfn_exampleDev03",
+    "qa": "dfn_exampleQa03",
+    "prod": "dfn_exampleProd03"
+  }
+}

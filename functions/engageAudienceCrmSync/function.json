@@ -1,0 +1,8 @@
+{
+  "description": "Applies Engage audience membership changes to a CRM",
+  "functionIds": {
+    "dev": "dfn_exampleDev02",
+    "qa": "dfn_exampleQa02",
+    "prod": "dfn_exampleProd02"
+  }
+}

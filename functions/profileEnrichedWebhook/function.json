@@ -1,0 +1,8 @@
+{
+  "description": "Forwards track events to a customer webhook, enriched with Engage traits",
+  "functionIds": {
+    "dev": "dfn_exampleDev01",
+    "qa": "dfn_exampleQa01",
+    "prod": "dfn_exampleProd01"
+  }
+}

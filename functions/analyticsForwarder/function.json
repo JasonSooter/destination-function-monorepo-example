@@ -1,0 +1,8 @@
+{
+  "description": "Normalizes and forwards events to an analytics collector",
+  "functionIds": {
+    "dev": "dfn_exampleDev04",
+    "qa": "dfn_exampleQa04",
+    "prod": "dfn_exampleProd04"
+  }
+}
