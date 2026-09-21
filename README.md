@@ -103,9 +103,15 @@ The [GitHub Actions workflow](.github/workflows/deployDestinationFunction.yml) a
 per-function, per-environment fan-out works — Actions is the path to follow;
 Buildkite is the Twilio-internal option.
 
-They are **illustrative only here**: the function IDs in each `function.json` are
-placeholders and no `PUBLIC_API_TOKEN` secret is configured, so nothing deploys
-anywhere. `npm test` is the runnable proof in this repo.
+The Actions workflow **does run here**, and that is deliberate: it demonstrates the
+`discover` job feeding `fromJSON` into a per-function matrix, so you can see four
+deploy legs fan out from a filesystem scan with nothing listed in the workflow
+file.
+
+It does **not** deploy. The function IDs in each `function.json` are placeholders
+and no `PUBLIC_API_TOKEN` secret is configured, so each deploy leg fails at the
+Segment API call by design. The `test` job and the matrix expansion are the parts
+being demonstrated; `npm test` is the runnable proof of the functions themselves.
 
 In a real repo, the function ID for each environment is committed in
 `functions/<name>/function.json` — an ID is an identifier, not a credential, and it

@@ -2,7 +2,7 @@
   "name": "destination-function-monorepo-example",
   "repository": {
     "type": "git",
-    "url": "https://github.com/segment-services-eng/destination-function-monorepo-example"
+    "url": "https://github.com/JasonSooter/destination-function-monorepo-example"
   },
   "license": "ISC",
   "engineStrict": true,
